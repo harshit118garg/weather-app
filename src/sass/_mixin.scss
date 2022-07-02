@@ -1,0 +1,34 @@
+@mixin dflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin inputCommonCode {
+    padding: $paddingFormBoxElems * 1.125;
+    border-radius: $radius * 10;
+  }
+  
+  @mixin btnCommonCode {
+    border-radius: $radius;
+    transition: $transition;
+    padding: $paddingFormBoxElems;
+    cursor: pointer;
+    box-shadow: $medium-shadow;
+  }
+  
+  @mixin btnGradient {
+    color: $color1;
+    background: rgb(49, 21, 21);
+    background: linear-gradient(
+      90deg,
+      rgba(49, 21, 21, 1) 0%,
+      rgba(85, 85, 85, 1) 99%
+    );
+  }
+  
+  @mixin boxShadow {
+    -webkit-box-shadow: -1px 6px 10px -3px rgba(0, 0, 0, 0.81);
+    -moz-box-shadow: -1px 6px 10px -3px rgba(0, 0, 0, 0.81);
+    box-shadow: -1px 6px 10px -3px rgba(0, 0, 0, 0.81);
+  }

@@ -1,0 +1,75 @@
+@import "../../sass/variables";
+@import "../../sass/mixin";
+
+.result {
+  width: 100vw;
+  height: 50vh;
+  @include dflex;
+
+  .resultBox {
+    width: 70vw;
+    height: 30vh;
+    background-color: #ecf0f1;
+    border-radius: $radius * 5;
+    box-shadow: $dark-shadow;
+    transition: $transition;
+    padding-top: $paddingResultBox * 4;
+
+    &:hover {
+      transform: scale(1.025);
+    }
+
+    @media (max-width: 400px) {
+      width: 80vw;
+      height: 35vh;
+      padding-top: $paddingResultBox * 2;
+    }
+
+    @media (max-width: 768px) {
+      width: 80vw;
+      height: 35vh;
+      padding-top: $paddingResultBox * 5;
+    }
+  }
+
+  .row1 {
+    @include dflex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    font-size: $fontSize;
+
+    h2 {
+      @media (max-width: 400px) {
+        font-size: $fontSize * 1.25;
+      }
+    }
+
+    h1 {
+      font-size: $fontSize * 1.75;
+
+      @media (max-width: 400px) {
+        font-size: $fontSize * 1.5;
+      }
+    }
+
+    img {
+      width: 12rem;
+    }
+  }
+
+  .row2 {
+    margin-top: 3rem;
+    @include dflex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    font-size: $fontSize;
+
+    @media (max-width: 400px) {
+      font-size: $fontSize * 0.75;
+    }
+  }
+
+  .noData {
+    margin-top: 5rem;
+  }
+}

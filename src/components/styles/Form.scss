@@ -1,0 +1,32 @@
+@import "../../sass/variables";
+@import '../../sass/mixin';
+
+.formContainer {
+  width: 100vw;
+  height: 50vh;
+  @include dflex;
+  box-shadow: $light-shadow;
+  background: url('../../../public/images/bg.jpg') no-repeat;
+  background-size: cover;
+
+  .formBox {
+    @include dflex;
+    flex-direction: column;
+
+    .inputBox {
+      color: brown;
+      @include inputCommonCode;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      @include btnCommonCode;
+      @include btnGradient;
+
+      &:hover {
+        @include boxShadow;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
